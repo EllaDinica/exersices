@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E1.2_E.M</title>
+</head>
+<body><br>
+ <button id="btn">Enter name</button>   
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ <script>
+    $("#btn").click(function(){
+        let userName = prompt("Enter your name");
+        if(userName.length <= 5){
+            let shortForm = prompt("Is that a short version of your name or a full version?");
+            if(shortVersion === "short version"){
+                let foolname = prompt("Wow, what is your real name?");
+                alert("Cool, it's realy beautiful!");
+            } else{
+                alert("Wow, you have a really beautiful name");
+            };
+        } else {
+            alert("Wow, it's very beautiful name");
+        };
+    });
+ </script>
+</body>
+</html>
