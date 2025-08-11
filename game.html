@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EllaDinica_game</title>
+</head>
+<body>
+    <h1 align="center">Вітаємо на нaшій грі!</h1>
+    <button class="btn">Почати</button>
+    <script>
+        document.querySelector(".btn").addEventListener("click", function(){
+            let userName = prompt("Уведіть, будь ласка, ваше ім'я для початку гри");
+            let choice = prompt("Далі оберіть один з наведенх варіантів 'Вітання', 'Правила гри', 'Вийти'");
+            if(choice === "Вітання"){
+                let years = prompt("Спершу введіть, будь ласка, Ваш вік");
+                if(years <=17){
+                    alert("Вибачте, але ми не можемо продовжити. Ця гра для старшої вікової категорії");
+                } else {
+                    alert("Бажаємо Вам гарної гри");
+                }
+            } else if (choice === "Правила гри"){
+                    alert("1. Не використовувати неформативну лексику, погрози і т.д.");
+                    alert("2. Не використовувати чіти, а також все що може вплинути на код гри");
+                    alert("3. Порушувати авторські права без угоди автора");
+                }
+            else if (choice === "Вийти"){
+                    alert("Зустрінемося наступного разу. Гарного дня) 'http://127.0.0.1:5500/game.html'");
+                }
+            
+        });
+    </script>
+</body>
+</html>
