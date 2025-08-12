@@ -31,4 +31,34 @@
         });
     </script>
 </body>
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+        function findMax(arr){
+            let max = arr[0];
+            for(let i = 0; i < arr.lenght; i++){
+                if(arr[i] > max){
+                    max=arr[i];
+                };
+            };
+            return max;
+        }
+
+        findMax(40, 90, 85, 74, 100);
+        console.log(max);
+    </script>
+</body>
 </html>
