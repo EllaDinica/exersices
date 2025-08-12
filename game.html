@@ -62,3 +62,29 @@
     </script>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maxFind(arr){  //створюємо функцію з ім'ям maxFind, усередині якої масив, що вводиться під час виклику функції
+            let max = arr[0]; //створюємо змінну let з ім'ям max та надаємо ій значення нульового (першого) елемента масива
+            for(let i = 0; i < arr.length; i++){  //створюємо цикл, де будемо перебирати всі числа масива
+                if(arr[i] > max){ //створюємо умову - якщо якесь з чисел яке ми перебираємо в масиві більше за попереднє 
+                    max = arr[i]; //то змінна max присвоює собі це значення, таким чином знаходячи найбільше з усіх чисел
+                };
+            };
+            return max; //завершення функції 
+        }
+
+        console.log(maxFind([50, 80, 70, 800])); //виведення в консоль найбліьшого зі саписаних чисел
+    </script>
+</body>
+</html>
