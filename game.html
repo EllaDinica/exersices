@@ -88,3 +88,69 @@
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #e6e6e6;
+            color: #006666;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Courier, monospace;
+        }
+
+         #div1{
+            text-align: center;
+            text-shadow: -5px 5px 5px grey;
+        }
+
+        h1{
+            margin-bottom: 20px;
+        }
+
+        #btn{
+            color: #008080;
+            border: 1px solid #006666;
+            border-radius: 5%;
+            font-size: 90%;
+            font-family: Andale Mono, monospace;
+            box-shadow: 5px 5px 10px gray;
+        }
+    </style>
+    
+    <div id="div1"><h1>Iucundum est te in hoc loco videre... modo relaxa</h1>
+        <button id="btn">Klicken Sie auf mich, um fortzufahren</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        let quotes = [
+            "Aaron bin ich",
+            "Can you at least not drive up to him in my presence?",
+            "So, I left.. I don't know you",
+            "War is profitable, no one needs meaningless sermons about world peace",
+            "Derjenige, der normal ist",
+            "I don't like that word. Don't use it",
+            "Here's another one. You wanted me to fight for her. Do you think he'll fight for you?",
+            "Neil used Caitlin on me, I used Neil on Andrew. I set a condition: either Andrew lets me go or breaks up with Neil",
+            "Don't worry, let's play",
+            "Kindergarten",
+            "Are you taking an example from the dead?",
+        ]; 
+            $("#btn").click(function(){
+                alert("I love you so much");
+            });
+
+    </script>
+</body>
+</html>
