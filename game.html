@@ -390,3 +390,75 @@
 </body>
 </html>
 
+
+
+
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>22.2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <canvas id="canvas" width="400" height="400" style="border: 1px solid black;"></canvas>
+
+  <script>
+
+    let colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "navy", "aqua", "#ffccff"];
+
+    let Word = function(){
+        this.x = 100;
+        this.y = 100;
+        this.xSpeed = (Math.random() * 10) - 3;
+        this.ySpeed = (Math.random() * 10) - 4;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+    };
+
+    Word.prototype.draw = function(){
+        circle(this.x, this.y, 20, true, this.color);
+    };
+
+    Ball.prototype.move = function(){
+        this.x += this.xSpeed;
+        this.y += this.ySpeed;
+    };
+
+    Ball.prototype.checkCollision = function(){
+        if(this.x < 0 || this.x > width){
+            this.xSpeed = -this.xSpeed;
+        }
+        if(this.y < 0 || this.y > height){
+            this.ySpeed = -this.ySpeed;
+        }
+    };
+
+    let canvas = document.getElementById('canvas');
+    let ctx = canvas.getContext('2d');
+
+    let width = canvas.width;
+    let height = canvas.height;
+
+    let balls = [];
+    for (let i = 0; i < 10; i++) {
+        balls.push(new Ball());
+    }
+
+    setInterval(function(){
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < balls.length; i++) {
+            balls[i].draw();
+            balls[i].move();
+            balls[i].checkCollision();
+        }
+
+    }, -100);
+    
+  </script>
+
+</body>
+</html>
+
